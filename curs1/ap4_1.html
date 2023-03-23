@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP4_1</title>
+</head>
+
+<body>
+
+    <script>
+
+        class Creion {
+            areVarf = true;
+            constructor(nume, pret, culoare, lungime, material, stoc) {
+                this.nume = nume;
+                this.pret = pret;
+                this.culoare = culoare;
+                this.lungime = lungime;
+                this.material = material;
+                if (stoc >= 0) {
+                    this.stoc = stoc;
+                }
+                else {
+                    throw 'Nu mai este pe stoc';
+                }
+            }
+            scrie() {
+                if (this.areVarf === true) {
+                    this.lungime--;
+                    console.log(`Scriu cu ${this.nume}`);
+                }
+                else {
+                    console.log(`Va rog sa ascutiti creionul ${this.nume}`);
+                    this.areVarf = true;
+                    this.lungime -= 3;
+                }
+            }
+        }
+
+        const big = new Creion('Big', 10, 'rosu', true, 20, 'lemn', 100);
+        big.areVarf = false;
+        console.log(big);
+
+        const pilot = new Creion('Pilot', 25, 'albastru', true, 25, 'plastic', 200);
+        big.areVarf = false;
+        console.log(pilot);
+        
+    </script>
+
+</body>
+
+</html>
