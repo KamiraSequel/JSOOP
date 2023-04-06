@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        class Vehicle{
+            constructor(name, color, manufacturer, date){
+                this.name = name;
+                this.color = color;
+                this.manufacturer = manufacturer;
+                this.date = date;
+            }
+
+            info(){
+                return `The ${this.name} has the color ${this.color} from ${this.manufacturer} made on ${this.date}`;
+            }
+
+            start(){
+                return `The ${this.name} has been started`;
+            }
+
+            stop(){
+                return `The ${this.name} has stopped`;
+            }
+
+            pickUpPassengers(){
+                return `The ${this.name} has picked up a few passengers`;
+            }
+
+            dropOffPassengers(){
+                return `The ${this.name} has dropped off the passengers`;
+            }
+
+            pickUpPassenger(){
+                return `The ${this.name} has picked up a passenger`;
+            }
+
+            dropOffPassenger(){
+                return `The ${this.name} has dropped off the passenger`;
+            }
+
+        }
+
+
+        const vehicle1 = new Vehicle("car", "red", "Ford", 2015);
+        const vehicle2 = new Vehicle("motorbike", "blue", "Honda", 2018);
+        console.log(vehicle1.info());
+        console.log(vehicle1.start());
+        console.log(vehicle1.stop());
+        console.log(vehicle1.pickUpPassengers());
+        console.log(vehicle1.dropOffPassengers());
+        console.log(vehicle2.info());
+        console.log(vehicle2.start());
+        console.log(vehicle2.stop());
+        console.log(vehicle2.pickUpPassenger());
+        console.log(vehicle2.dropOffPassenger());
+
+    </script>
+
+</body>
+
+</html>
